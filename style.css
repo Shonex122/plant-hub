@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  height: 100vh;
+  padding-inline: 10em;
+  padding-block: 2em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* From https://css.glass */
+  background: rgba(10, 150, 40, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  /* border: 1px solid rgba(10, 150, 40, 0.1); */
+  border: none;
+  padding: 1em;
+}
+
+nav > a {
+  text-decoration: none;
+}
+
+nav .logo {
+  font-family: "Lobster";
+  color: #0a9628;
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+nav ul {
+  display: flex;
+  gap: 4.5em;
+  /* margin-left: auto; */
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  transition: 0.3s;
+  margin: auto;
+  margin-top: 3px;
+  background-color: green;
+}
+
+nav ul li:hover::after {
+  width: 80%;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-family: "Alata";
+  font-size: 20px;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: green;
+}
+
+.nav-icons .fa-solid {
+  font-size: 1.2em;
+  color: green;
+}
+
+.menu {
+  display: none !important;
+  color: #0a9628;
+  font-size: 1.6em;
+}
+
+/* .nav-icons button {
+  margin-left: 30px;
+  padding: 16px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Alata";
+  font-size: 1.2em;
+  background-color: transparent;
+  color: #fff;
+  transition: width 2s;
+  border: none;
+} */
+
+button {
+  margin-left: 30px;
+  font-size: 1.2em;
+  font-family: "Alata";
+  position: relative;
+  overflow: hidden;
+  width: 150px;
+  height: 50px;
+  background: transparent;
+  color: green;
+  border: 2px solid green;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 0;
+  transition: color 1s ease;
+  border-radius: 5px;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: green;
+  z-index: -1;
+  transition: width 2s ease;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+button:hover {
+  color: white;
+}
+
+.head-text {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.head-text h1 {
+  font-size: 4em;
+  color: #0a9628;
+}
+
+.head-text span {
+  font-family: "Playfair Dipslay";
+  font-style: italic;
+}
+
+.head-text p {
+  margin-top: 1.2em;
+  max-width: 630px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Alata";
+}
+
+.main-btn {
+  margin-top: 20px;
+}
+
+.imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.imgs img {
+  width: 100%;
+  height: 530px;
+  border-radius: 8px;
+}
+
+.imgs img.img1 {
+  width: 300px;
+  height: auto;
+}
+
+.imgs img.img2 {
+  width: 700px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    /* height: 100vh; */
+    padding-inline: 3em;
+    padding-block: 2em;
+  }
+
+  .menu {
+    display: block !important;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+
+  .head-text h1 {
+    font-size: 5em;
+    text-align: center;
+  }
+
+  .imgs img.img1 {
+    display: none;
+  }
+
+  .imgs img.img2 {
+    width: 100%;
+    height: auto;
+  }
+}
