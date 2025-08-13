@@ -236,10 +236,15 @@ button:hover {
 }
 
 @media screen and (max-width: 480px) {
-  .head-text h1 {
-    font-size: 3em;
+  header {
+    /* height: 100vh; */
+    padding-inline: 1em;
+    padding-block: 2em;
   }
 
+  .head-text h1 {
+    font-size: 2.8em;
+  }
   .main-btn {
     width: 400px;
     display: flex;
