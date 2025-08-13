@@ -235,13 +235,13 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 480px) {
   .head-text h1 {
     font-size: 3em;
   }
 
   .main-btn {
+    width: 400px;
     display: flex;
-    justify-content: center;
   }
 }
