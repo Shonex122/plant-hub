@@ -234,3 +234,13 @@ button:hover {
     height: auto;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .head-text h1 {
+    font-size: 4em;
+  }
+
+  .main-btn {
+    display: flex;
+  }
+}
